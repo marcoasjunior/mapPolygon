@@ -29,13 +29,13 @@ module.exports = {
 
         }
 
-        const found = foundAreas > 0 ? true : false
+        const found = foundAreas.length > 0 ? true : false
 
         const saveDemand = await Demand.createDemand({
 
             point: point,
             found: found,
-            foundAreas: foundAreas
+            areas: foundAreas
 
 
         })
