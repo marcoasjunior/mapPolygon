@@ -1,8 +1,8 @@
 const express = require('express')
 const routes = express.Router()
-const DemandController = require('../controllers/DemandController')
+const DemandController = require('./controllers/DemandController')
 
-routes.post('/demand', DemandController.execute)
+routes.get('/demand', DemandController.execute)
 
 
 module.exports = routes

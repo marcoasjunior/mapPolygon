@@ -1,4 +1,4 @@
-const { Schema } = require('../mongoose')
+const { Schema } = require('../database/mongoose')
 
 const DemandSchema = new Schema({
 

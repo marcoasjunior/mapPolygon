@@ -3,10 +3,10 @@ const Demand = require("../models/Demand");
 module.exports = {
 
 
-    execute() {
+    execute(req, res) {
 
-        
 
+        res.send('teste')
 
 
     }
