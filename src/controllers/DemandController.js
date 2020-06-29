@@ -12,6 +12,8 @@ module.exports = {
 
         const geo = await getGeo(address) // Pega coordenadas
 
+        if (geo.length === 0) return res.status(500).send('Endereço não encontrado')
+
         const point = {
 
             latitude: geo[0].latitude,
