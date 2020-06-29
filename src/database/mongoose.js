@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const CONNECTION = process.env.NODE_ENV == 'test' ? process.env.MONGOURI_TEST : process.env.MONGOURI
+const CONNECTION = 'mongodb+srv://root:123123123@desafiomap-ajtcd.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority'
 
 mongoose.connect(CONNECTION, {
     useNewUrlParser: true,
