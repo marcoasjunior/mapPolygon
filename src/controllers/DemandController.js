@@ -19,7 +19,7 @@ module.exports = {
 
         }
 
-        const foundAreas = []
+        const foundAreas = [] // Array de áreas em que o ponto está contido
 
         for (const area of areas) {
 
@@ -29,9 +29,18 @@ module.exports = {
 
         }
 
+        const found = foundAreas > 0 ? true : false
 
-        res.send(foundAreas)
+        const saveDemand = await Demand.createDemand({
 
+            point: point,
+            found: found,
+            foundAreas: foundAreas
+
+
+        })
+
+        res.send(saveDemand)
 
     }
 
