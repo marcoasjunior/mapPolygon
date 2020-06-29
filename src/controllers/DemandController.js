@@ -8,7 +8,7 @@ module.exports = {
 
     async execute(req, res) {
 
-        const { address } = req.body
+        const { address } = req.params
 
         const geo = await getGeo(address) // Pega coordenadas
 
