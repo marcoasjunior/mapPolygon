@@ -2,6 +2,11 @@ const { Schema } = require('../database/mongoose')
 
 const DemandSchema = new Schema({
 
+    query: {
+        type: String,
+        require: true
+    },
+
     point: {
         type: Array,
         require: true

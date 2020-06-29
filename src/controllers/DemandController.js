@@ -37,16 +37,22 @@ module.exports = {
 
             point: point,
             found: found,
-            areas: foundAreas
+            areas: foundAreas,
+            query: address
 
 
         })
 
         res.send(saveDemand)
 
+    },
+
+    async index(req, res) {
+
+        const docs = await Demand.find()
+
+        res.json(docs)
+
     }
-
-
-
 
 }
